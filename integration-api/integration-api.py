@@ -125,8 +125,8 @@ def insert_lead_tecnom():
                         append_values(v, odoo_json)
                 odoo_insert(database, odoo_json)
                 print(odoo_json)
-#        else:
-#           abort(401)
+            else:
+                abort(401)
         else:
             LOG.ERROR("El page_name es invalido o falta el campo TITULO en el json")
             abort(401)
