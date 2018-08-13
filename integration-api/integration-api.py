@@ -100,7 +100,7 @@ def insert_lead():
 
 
 @csrf.exempt
-@app.route('/mad/new_lead_tecnom', methods=['POST'])
+@app.route('/mad/new_lead_dialogflow', methods=['POST'])
 def insert_lead_tecnom():
     try:
         json = request.json
