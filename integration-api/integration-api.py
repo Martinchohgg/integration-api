@@ -101,7 +101,7 @@ def insert_lead():
 
 @csrf.exempt
 @app.route('/mad/new_lead_dialogflow', methods=['POST'])
-def insert_lead_tecnom():
+def insert_lead_dialogflow():
     try:
         json = request.json
         LOG.info("Nuevo lead recibido: ", json)
