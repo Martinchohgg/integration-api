@@ -109,6 +109,8 @@ def insert_lead_dialogflow():
         params = queryResults["parameters"]
         titulo = params["titulo"]
         page_name = params["page_name"]
+        page_name = page_name.encode('ascii', 'ignore')
+        page_name = str(page_name)
         page_name = match_regex(page_name, PAGE_NAME_REGEX)
         if page_name is not None and titulo is not None and page_name and titulo:
             auth = request.headers[AUTHORIZATION]
