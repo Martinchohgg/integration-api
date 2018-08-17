@@ -19,6 +19,7 @@ def odoo_connect(db):
 
 def odoo_insert(db, lead):
     try:
+        db = str(db)
         uid = odoo_connect(db)
         if uid is not False and isinstance(uid, int):
             models = xmlrpc.client.ServerProxy(XMLRPC_OBJECT.format(ODOO_SERVER))
